@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Universitas Catur Insan Cendekia">
+<meta name="author" content="Universitas Catur Insan Cendekia">
+<meta name="keywords" content="Universitas Catur Insan Cendekia">
+
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Universitas Catur Insan Cendekia">
+<meta property="og:url" content="">
+<meta property="og:title" content="Universitas Catur Insan Cendekia">
+<meta property="og:description" content="Universitas Catur Insan Cendekia">
+<meta property="og:image" content="img/cic.png">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="Universitas Catur Insan Cendekia">
+<meta name="twitter:description" content="Universitas Catur Insan Cendekia">
+<meta name="twitter:image" content="img/cic.png">
+
+<title>Universitas Catur Insan Cendekia</title>
+<meta content="Universitas Catur Insan Cendekia" name="description">
+<meta content="Universitas Catur Insan Cendekia" name="keywords">
+
+
+<link href="img/cic.png" rel="icon">
+<link href="img/cic.png" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border" style="width: 3rem; height: 3rem; color: #0451a0;" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<header id="beranda" class="relative w-full z-[999]">
+  <div class="bg-[#0451a0] h-12 w-full"></div>
+
+  <div id="navbar" class="bg-[#FFC107] navbar-bg h-12 w-full flex items-center justify-between px-6 transition-all duration-300">
+    <span id="cicText" class="opacity-0 font-bold text-[#0c2f6e] text-lg transition-opacity duration-300">
+      CIC University
+    </span>
+
+    <nav id="desktopMenu" class="hidden md:flex gap-6 font-semibold text-[#0c2f6e]">
+      <a href="#beranda" class="flex items-center gap-1">
+        <i class="fas fa-home"></i> Beranda
+      </a>
+      <a href="#visi-misi" class="flex items-center gap-1">
+        <i class="fas fa-hand-point-up"></i> Visi-Misi
+      </a>
+      <a href="#agenda" class="flex items-center gap-1">
+        <i class="fas fa-calendar-alt"></i> Agenda
+      </a>
+      <a href="#berita" class="flex items-center gap-1">
+        <i class="fas fa-newspaper"></i> Berita
+      </a>
+      <a href="#prodi" class="flex items-center gap-1">
+        <i class="fas fa-graduation-cap"></i> Prodi
+      </a>
+      <a href="#event" class="flex items-center gap-1">
+        <i class="fas fa-calendar-check"></i> Event
+      </a>
+      <a href="#fasilitas" class="flex items-center gap-1">
+        <i class="fas fa-building"></i> Fasilitas
+      </a>
+      <a href="#kontak" class="flex items-center gap-1">
+        <i class="fas fa-phone-alt"></i> Kontak
+      </a>
+    </nav>
+
+    <button id="mobileMenuButton" class="md:hidden text-[#0c2f6e] focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="fixed top-24 left-0 w-full bg-[#FFC107] shadow-md z-[998] hidden transition-all duration-300 transform origin-top">
+    <nav class="flex flex-col p-4 font-semibold text-[#0c2f6e]">
+      <a href="#beranda" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Beranda</a>
+      <a href="#visi-misi" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Visi-Misi</a>
+      <a href="#agenda" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Agenda</a>
+      <a href="#berita" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Berita</a>
+      <a href="#prodi" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Prodi</a>
+      <a href="#event" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Event</a>
+      <a href="#fasilitas" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Fasilitas</a>
+      <a href="#kontak" class="menu-link py-2 px-4 hover:bg-[#f0b400] rounded">Kontak</a>
+    </nav>
+  </div>
+
+  <div class="absolute top-0 left-2 z-[1000]">
+    <img 
+      src="img/cic.png" 
+      class="block max-w-[80px] h-auto sm:max-w-[130px] md:max-w-[150px] animate-drop"
+      style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));" 
+      alt="Logo" 
+    />
+  </div>
+</header>
+
+<section class="relative w-full overflow-hidden font-['Poppins']">
+  <div id="slider" class="relative w-full h-[500px]">
+    
+    <!-- Slide 1 -->
+    <div class="slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out">
+      <img src="img/banner02.png" class="w-full h-full object-cover" alt="Banner 1">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white bg-[#0451a0]/80 px-6 py-3 rounded-full">
+          Selamat Datang Di
+        </h1>
+        <h2 class="text-xl md:text-3xl font-bold text-white bg-[#ffc107]/90 px-5 py-2 rounded-full mt-2">
+          Universitas CIC Cirebon
+        </h2>
+        <p class="mt-6 text-base md:text-xl font-medium text-white bg-black/60 px-6 py-3 rounded-full">
+          TECHNOPRENEUR UNIVERSITY – Menjadi Technopreneur di Kampus Merdeka
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+      <img src="img/banner01.png" class="w-full h-full object-cover" alt="Banner 2">
+      <div class="absolute inset-0 flex flex-col items-end justify-center text-right pr-8 md:pr-16 bg-black/20">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-3">
+          Bersama UCIC
+        </h1>
+        <p class="text-xl md:text-3xl font-semibold text-white">
+          Jadilah Generasi Emas
+        </p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+      <img src="img/bannner04.jpeg" class="w-full h-full object-cover" alt="Banner 3">
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 bg-black/30">
+        <p class="text-2xl md:text-4xl font-bold text-white bg-[#0451a0]/80 px-6 py-3 rounded-full">
+          Bergabunglah bersama kami<br>
+          Untuk terbang tinggi, dan meraih sukses bersama-sama.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="bg-[#f6c21e] max-w-full sm:max-w-3xl mx-auto rounded-2xl mt-[-60px] relative z-10 px-2 sm:px-6 py-3 sm:py-4 flex flex-wrap justify-center sm:justify-between items-center shadow-lg gap-2">
+
+
+  <a class="group flex flex-col items-center text-[black] transition-all duration-200 font-extrabold text-[10px] sm:text-xs md:text-sm w-20 sm:w-auto px-2 sm:px-3 py-1 sm:py-2 rounded-lg" href="#">
+    <i class="fas fa-bullhorn text-2xl sm:text-3xl mb-1 transition-transform duration-200 group-hover:-translate-y-1"></i>
+    <span class="leading-tight text-center text-[11px] sm:text-[13px] md:text-[15px]">CAMPUS<br>INFORMATION</span>
+  </a>
+
+  <!-- CAMPUS NEWS -->
+  <a class="group flex flex-col items-center text-[black] transition-all duration-200 font-extrabold text-[10px] sm:text-xs md:text-sm w-20 sm:w-auto px-2 sm:px-3 py-1 sm:py-2 rounded-lg" href="#">
+    <i class="fas fa-newspaper text-2xl sm:text-3xl mb-1 transition-transform duration-200 group-hover:-translate-y-1"></i>
+    <span class="leading-tight text-center text-[11px] sm:text-[13px] md:text-[15px]">CAMPUS<br>NEWS</span>
+  </a>
+
+  <!-- CAMPUS ACTIVITIES -->
+  <a class="group flex flex-col items-center text-[black] transition-all duration-200 font-extrabold text-[10px] sm:text-xs md:text-sm w-20 sm:w-auto px-2 sm:px-3 py-1 sm:py-2 rounded-lg" href="#">
+    <i class="fas fa-calendar-alt text-2xl sm:text-3xl mb-1 transition-transform duration-200 group-hover:-translate-y-1"></i>
+    <span class="leading-tight text-center text-[11px] sm:text-[13px] md:text-[15px]">CAMPUS<br>ACTIVITIES</span>
+  </a>
+
+  <!-- PMB INFO -->
+  <a class="group flex flex-col items-center text-[black] transition-all duration-200 font-extrabold text-[10px] sm:text-xs md:text-sm w-20 sm:w-auto px-2 sm:px-3 py-1 sm:py-2 rounded-lg" href="#">
+    <i class="fas fa-user-plus text-2xl sm:text-3xl mb-1 transition-transform duration-200 group-hover:-translate-y-1"></i>
+    <span class="leading-tight text-center text-[11px] sm:text-[13px] md:text-[15px]">PMB<br>INFO</span>
+  </a>
+
+</div>
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+
+<section id="visi-misi" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-normal mb-3">
+      Visi, Misi, Dan Tujuan Prodi Manajemen
+
+      </h2>
+      <p class="text-sm sm:text-base text-gray-700">
+      Universitas Catur Insan Cendekia  
+      </p>
+    </div>
+    <div class="mt-10 flex flex-col md:flex-row md:space-x-12 max-w-5xl mx-auto">
+      <div id="text-box" class="w-full md:w-1/2 bg-gray-50 rounded-md p-6 space-y-4 slide-in-left overflow-y-auto min-h-[500px]">
+        <div>
+          <button aria-expanded="false" class="accordion-btn w-full flex justify-between items-center text-gray-900 font-semibold text-base sm:text-lg leading-tight">
+            Visi Program Studi Manajemen
+            <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
+            "Menjadi Program Studi Manajemen yang berorientasi dalam bidang kewirausahaan dan teknologi untuk mendukung masyarakat daerah dengan menghasilkan lulusan di bidang manajemen dan bisnis yang mampu untuk menanggapi perubahan zaman"
+          </div>
+        </div>
+        <div>
+          <button aria-expanded="false" class="accordion-btn w-full flex justify-between items-center text-gray-900 font-semibold text-base sm:text-lg leading-tight">
+            Misi Program Studi Manajemen
+            <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
+            <ol class="list-decimal list-inside space-y-2">
+              <li>Menyelenggarakan pengajaran di bidang ilmu manajemen yang berfokus untuk menghasilkan lulusan-lulusan dalam bidang manajemen dan bisnis yang mampu untuk menanggapi perubahan zaman</li>
+              <li>Mendukung dan menciptakan lingkungan yang positif untuk pembelajaran, inovasi dan penerapan dalam bidang ilmu manajemen dan bisnis yang bersinergi dengan kewirausahaan dan teknologi informasi.</li>
+              <li>Menjalankan aktivitas tridharma di bidang Manajemen dan bisnis untuk memberikan kontribusi terhadap masyarakat daerah.</li>
+              <li>Menyelenggarakan pendidikan yang terjangkau dalam memperluas akses pendidikan di bidang manajemen dan bisnis pada masyarakat daerah</li>
+            </ol>
+          </div>
+        </div>
+        <div>
+          <button aria-expanded="false" class="accordion-btn w-full flex justify-between items-center text-gray-900 font-semibold text-base sm:text-lg leading-tight">
+            Tujuan Program Studi Manajemen
+            <i class="fas fa-chevron-down text-gray-600 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
+            <ol class="list-decimal list-inside space-y-2">
+              <li>Menghasilkan Profil Lulusan yang berkompeten di bidang Manajemen dan Bisnis yang mampu beradaptasi dengan perubahan zaman pada bidang kewirausahaan yang bermanfaat bagi kemajuan industri, UMKM dan masyarakat, diperlengkapi dengan kemampuan berpikir kritis, kreatif, dan ini berinisiatif.</li>
+              <li>Mewujudkan tata kelola Program Studi Manajemen yang baik, yang mencakup struktur, sistem dan proses demi terealisasinya rencana pengembangan jangka panjang Fakultas baik pengembangan sarana prasarana dan pengembangan kualitas SDM dalam bidang ilmu manajemen dan bisnis.</li>
+              <li>Menghasilkan produk-produk tridharma dalam bidang manajemen dan bisnis yang berkontribusi terhadap industri, UMKM dan masyarakat daerah serta bermutu unggul, relevan dengan perubahan dunia dan bernilai tepat guna.</li>
+              <li>Melaksanakan dan menghasilkan akses pendidikan tinggi bidang manajemen dan bisnis yang terjangkau oleh masyarakat daerah dari berbagai lini Masyarakat.</li>
+              <li>Menghasilkan dan melaksanakan kerjasama yang baik dengan tujuan meningkatkan daya guna, relevansi dan keterkaitan pembelajaran bidang ilmu manajemen dan bisnis, dan kegiatan Tri Dharma dengan Program Studi Manajemen lainnya, mitra industri, dan lembaga lainnya di dunia industri dan berbagai lini masyarakat.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div id="image-box" class="w-full md:w-1/2 mt-10 md:mt-0 relative flex justify-center items-center slide-in-right md:sticky md:top-20 md:self-start h-fit">
+        <img alt="profile-kampus" class="relative z-10 rounded-md mdd:top-50" height="400" src="img/profilecampus.png" width="400"/>
+       
+       
+        
+        
+      </div>
+    </div>
+  </section>
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+<div id="agenda" class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      
+      
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="image-wrapper">
+          <img src="img/about.jpeg" 
+               alt="sertifikat">
+        </div>
+      </div>
+
+
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+       <h6 class="section-title bg-white text-start pe-3" style="color: #0451a0;">Berita Seputar Kampus</h6>
+<h2 class="mb-4" style="color: #0451a0;">Program Studi Sistem Informasi UCIC Raih Akreditasi “Baik Sekali” dari LAM INFOKOM</h2>
+<a class="py-2 px-4 mb-4 bg-[#0451a0] text-white rounded" 
+   href="#berita">
+   Baca Selengkapnya
+</a>
+
+
+        <hr class="my-4">
+
+        <h6 class="section-title bg-white text-start text-[#202c45] pe-3">Agenda Kegiatan</h6>
+        <div class="agenda-list">
+
+      
+          <div class="agenda-item d-flex mb-3">
+            <div class="date-box flex-shrink-0 me-3 text-center">
+              <h5 class="mb-0 text-white">24-28</h5>
+              <small class="text-white">Feb '25</small>
+            </div>
+            <div>
+              <h6 class="mb-1">Pelaksanaan Sidang Proposal Proyek</h6>
+              <small class="text-muted"><i class="far fa-clock text-primary me-1"></i>08.00 sd 16.00</small>
+            </div>
+          </div>
+
+          <div class="agenda-item d-flex mb-3">
+            <div class="date-box flex-shrink-0 me-3 text-center">
+              <h5 class="mb-0 text-white">27</h5>
+              <small class="text-white">Feb '25</small>
+            </div>
+            <div>
+              <h6 class="mb-1">Pameran UAS Semester Ganjil Tahun Akademik 2024-2025</h6>
+              <small class="text-muted"><i class="far fa-clock text-primary me-1"></i>08.30 sd 12.00</small>
+            </div>
+          </div>
+
+         
+          <div class="agenda-item d-flex mb-3">
+            <div class="date-box flex-shrink-0 me-3 text-center">
+              <h5 class="mb-0 text-white">10-19</h5>
+              <small class="text-white">Feb '25</small>
+            </div>
+            <div>
+              <h6 class="mb-1">UJIAN UAS SEMESTER GANJIL TAHUN AKADEMIK 2024-2025</h6>
+              <small class="text-muted"><i class="far fa-clock text-primary me-1"></i>08.00</small>
+            </div>
+          </div>
+
+     
+          <div class="agenda-item d-flex">
+            <div class="date-box flex-shrink-0 me-3 text-center">
+              <h5 class="mb-0 text-white">02-10</h5>
+              <small class="text-white">Dec '24</small>
+            </div>
+            <div>
+              <h6 class="mb-1">UJIAN UTS SEMESTER GANJIL TAHUN AKADEMIK 2024-2025</h6>
+              <small class="text-muted"><i class="far fa-clock text-primary me-1"></i>08.00</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+<div id="app">
+
+  <!-- Section dengan background biru full -->
+  <section id="berita" class="w-full bg-[#0451a0] py-10">
+    
+   <h1 class="text-center text-[#FFC107] font-semibold text-2xl sm:text-3xl mb-6 font-['Montserrat'] tracking-wide">
+  BERITA TERKINI
+</h1>
+
+    <!-- Grid Berita -->
+    <main
+      class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 mt-8"
+    >
+      <article
+        v-for="(item, index) in news"
+        :key="index"
+        class="card-item bg-white rounded-xl overflow-hidden border-r-4 border-b-4 border-[#ffc107] slide-in-right-smooth"
+        :style="{ animationDelay: `${index * 0.15}s` }"
+      >
+        <img
+          :src="item.image"
+          :alt="item.title"
+          class="card-img w-full h-48 object-cover"
+        />
+        <div class="p-4">
+          <h2 class="font-bold text-sm sm:text-base mb-2 leading-tight">
+            {{ item.title }}
+          </h2>
+          <p class="text-xs sm:text-sm text-[#1e40af] leading-snug line-clamp-3">
+            {{ item.excerpt }}
+          </p>
+          <button
+            @click="openModal(item)"
+            class="text-blue-600 font-semibold mt-2"
+          >
+            Baca Selengkapnya
+          </button>
+        </div>
+      </article>
+    </main>
+  </section>
+
+  <!-- Modal -->
+  <div
+    v-if="selectedArticle"
+    class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
+  >
+    <div
+      class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative overflow-y-auto max-h-[90vh]"
+    >
+      <button
+        @click="closeModal"
+        class="btn-close bg-gray-200 text-black fixed top-20 right-4 p-2 rounded-full"
+      >
+        
+      </button>
+      <img
+        :src="selectedArticle.image"
+        :alt="selectedArticle.title"
+        class="w-full rounded-lg mb-4 object-contain"
+      />
+      <h2 class="text-xl font-bold mb-4">{{ selectedArticle.title }}</h2>
+      <p class="text-gray-700 text-sm leading-relaxed whitespace-pre-line">
+        {{ selectedArticle.content }}
+      </p>
+    </div>
+  </div>
+</div>
+<section id="prodi" class="w-full bg-[#FFC107]">
+  <div class="max-w-[1200px] mx-auto px-6 py-10">
+    <!-- Wrapper -->
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+      
+      <!-- Left side: Artikel -->
+      <div class="md:w-5/12">
+        <h2 class="text-2xl font-semibold text-[#0c2f56]">
+          <span class="font-bold">STUDY</span> PROGRAM
+        </h2>
+        <p class="text-xs tracking-widest text-gray-600 mt-1 mb-4">
+         Universitas Catur Insan Cendekia
+        </p>
+        <div class="w-12 h-[2px] bg-[#0c2f56] mb-6"></div>
+
+        <!-- List Prodi -->
+        <ul class="space-y-2 mb-8">
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">S1 - Informatics Engineering</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">S1 - Information Systems</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">S1 - Visual Communication Design</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">S1 - Management</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">S1 - Accounting</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">D3 - Informatics Management</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">D3 - Business Management</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">D3 - Computer Accounting</div></li>
+        </ul>
+      </div>
+
+      <!-- Right side: Fakultas -->
+      <div class="md:w-5/12">
+        <h2 class="text-2xl font-semibold text-[#0c2f56]">
+          <span class="font-bold">FAKULTAS</span>
+        </h2>
+        <p class="text-xs tracking-widest text-gray-600 mt-1 mb-4">
+          Universitas Catur Insan Cendekia
+        </p>
+        <div class="w-12 h-[2px] bg-[#0c2f56] mb-6"></div>
+
+        <!-- List Fakultas -->
+        <ul class="space-y-2">
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">Fakultas Prodi Manajemen</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">Fakultas Prodi Akuntansi</div></li>
+          <li><div class="arrow-box bg-[#0c2f56] text-white text-sm px-4 py-2 border-r-4 border-orange-600">Fakultas Prodi Manajemen Bisnis</div></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="mb-6">
+  <div class="campus-title">
+    <span>LOKASI</span> GEDUNG
+  </div>
+</div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+
+    <div class="card animate-scale-in" style="animation-delay:0s;">
+      <img src="/img/Gedung UCIC (1).jpeg" alt="Kampus Dharmahusada - A" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG AUDITORIUM</span></div>
+    </div>
+
+    <div class="card animate-scale-in" style="animation-delay:0.1s;">
+      <img src="img/Gedung B (2).jpeg" alt="Kampus Dharmawangsa - B" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG AUDITORIUM</span></div>
+    </div>
+
+    <div class="card animate-scale-in" style="animation-delay:0.2s;">
+      <img src="img/Gedung B (3).jpeg" alt="Kampus MERR - C" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG UCIC</span></div>
+    </div>
+
+    <div class="card animate-scale-in" style="animation-delay:0.3s;">
+      <img src="img/Gedung A (4).jpeg" alt="Kampus Fakultas Vokasi" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG REKTORAT</span></div>
+    </div>
+
+    <div class="card animate-scale-in" style="animation-delay:0.4s;">
+      <img src="img/gedung-pintu masuk.png" alt="Kampus Fakultas Vokasi" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG DEPAN</span></div>
+    </div>
+
+    <div class="card animate-scale-in" style="animation-delay:0.5s;">
+      <img src="img/gedung-libry.jpeg" alt="Kampus Fakultas Vokasi" class="hover-zoom" />
+      <div class="label-wave"><span>GEDUNG LIBRY</span></div>
+    </div>
+
+  </div>
+</div>
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+<section id="event" class="blue-section">
+  <div class="inner-wrapper flex flex-col md:flex-row gap-8">
+    <!-- Left side -->
+    <div class="md:w-1/3 flex flex-col justify-center space-y-6">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-wide uppercase">
+        EVENT
+      </h2>
+      <p class="event-desc">
+        Informasi kegiatan terbaru UCIC dengan berbagai aktivitas, seminar, workshop, hingga acara mahasiswa.
+      </p>
+    </div>
+
+    <!-- Right side scroll -->
+    <div class="md:w-2/3 scroll-container">
+      <div class="scroll-content">
+        <!-- Hanya masukkan konten asli (tanpa duplikat) -->
+        <div>
+          <img src="img/event01.jpeg" alt="">
+          <p>UCIC Laksanakan Asesmen Lapangan LAMEMBA untuk Program Studi D3 Manajemen Bisnis</p>
+        </div>
+        <div>
+          <img src="img/event02.png" alt="">
+          <p>Program Studi Sistem Informasi UCIC Jalani Asesmen Lapangan untuk Akreditasi</p>
+        </div>
+        <div>
+          <img src="img/event03.png" alt="">
+          <p>Pendampingan Ilustrasi AI: Mahasiswa UCIC Dibekali Keterampilan Desain Berbasis Teknologi</p>
+        </div>
+        <div>
+          <img src="img/event04.jpeg" alt="">
+          <p>Mahasiswa UCIC Ikuti Pelatihan Strategi Konten Digital untuk HIMA dan UKM</p>
+        </div>
+        <div>
+          <img src="img/event05.jpeg" alt="">
+          <p>FTI UCIC Lakukan Benchmarking Kurikulum ke FSI UNJANI: Sinergi Menuju Kurikulum Adaptif dan Kolaboratif</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <h2 class="text-2xl md:text-3xl font-bold text-center text-[#202c45] mb-8 tracking-wide">
+    Kerjasama / Afliasi
+  </h2>
+
+  <div class="logo-scroll-container" aria-label="Trusted logos scrolling from right to left" role="list">
+    <div class="logo-scroll-track">
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi01.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi02.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi03.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afiliasi04.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi05.png" width="200" />
+      </div>
+      <!-- duplikat biar infinite -->
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi01.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi02.png" width="150" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi03.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afiliasi04.png" width="200" />
+      </div>
+      <div>
+        <img alt="" class="max-h-10 object-contain" height="70" src="img/afliasi05.png" width="200" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+
+
+<div class="prestasi-wrapper">
+  <div class="prestasi-header">
+     <h2 class="prestasi-title">Mahasiswa Berprestasi</h2>
+    <div class="prestasi-nav">
+      <button id="prevBtn" aria-label="Previous prestasi">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button id="nextBtn" aria-label="Next prestasi">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="prestasi-container">
+    <div id="prestasiCard" class="prestasi-card">
+      <div class="prestasi-content">
+        <blockquote id="prestasiName">Nopi Fitrianingsih</blockquote>
+        <div class="prestasi-meta">
+          <p id="prestasiGelar">S1 - Sistem Informasi Komputerisasi Akuntansi</p>
+          <p id="prestasiRaihan">Raihan IPK Terbaik dari jurusan Sistem Informasi Komputer Akuntansi Angkatan 2016 dengan IPK 3,95</p>
+        </div>
+        <hr />
+       
+        <div class="prestasi-dots">
+          <span id="dot1" class="active"></span>
+          <span id="dot2"></span>
+          <span id="dot3"></span>
+        </div>
+      </div>
+      <div class="prestasi-image">
+        <img id="prestasiImage" src="img/prestasi01.png" alt="Portrait" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div style="height: 50px"></div>
+<div class="container-xxl py-5">
+  
+</div>
+
+
+<!-- Fasilitas Start -->
+<div id="fasilitas" class="container-xxl py-5 fasilitas">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      
+            <h1 class="mb-5">Fasilitas Kampus</h1>
+        </div>
+        <div class="row g-3">
+            <div class="col-lg-7 col-md-6">
+                <div class="row g-3">
+                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="img-fluid" src="img/Ruang Rapat B (4).jpeg" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">Ruang Rapat B</h5>
+                                <small class="text-primary"></small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="img-fluid" src="img/Ruang Rapat A (4).jpeg" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">Ruang Rapat A</h5>
+                                <small class="text-primary"></small>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                        <a class="position-relative d-block overflow-hidden" href="">
+                            <img class="img-fluid" src="img/Ruang Auditorium (2).jpeg" alt="">
+                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                <h5 class="m-0">Ruang Auditorium</h5>
+                                <small class="text-primary"></small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <img class="img-fluid position-absolute w-100 h-100" src="img/Ruang Lab Komputer (3).jpeg" alt="" style="object-fit: cover;">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                        <h5 class="m-0">Ruang Lab Komputer</h5>
+                        <small class="text-primary"></small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="kontak" class="bg-[#0B1424] max-w-full mx-auto px-6 py-12 flex flex-col md:flex-row md:justify-between gap-10 md:gap-8">
+    <div class="md:w-1/3 space-y-4">
+        <img alt="UCIC Universitas Catur Insan Cendekia logo in blue and yellow" class="w-30 h-auto -mt-12" height="97" src="img/cic.png" width="96"/>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 hover:text-blue-300 transition-colors">
+            <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>Jl. Kesambi No. 202, Drajat, Kesambi, Cirebon City, West Java 45133
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 hover:text-blue-300 transition-colors">
+            <i class="fas fa-phone-alt mr-2 text-blue-400"></i>Telephone: +62 231-200418
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 hover:text-blue-300 transition-colors">
+            <i class="fas fa-mobile-alt mr-2 text-blue-400"></i>PMB Info: +6289512314188
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 hover:text-blue-300 transition-colors">
+            <i class="fas fa-envelope mr-2 text-blue-400"></i>Email: info@cic.ac.id
+        </p>
+    </div>
+    <div class="md:w-1/3 space-y-4">
+        <h3 class="text-blue-400 font-semibold flex items-center gap-2 text-base">
+            <i class="fas fa-graduation-cap"></i>
+            Campus Application
+        </h3>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>Student Academic System (MyCIC)
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>Quality Management System (SiMANTU UCIC)
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>CIC Library (E-Library)
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>UCIC eBook Repository System (MYeBook)
+        </p>
+    </div>
+    <div class="md:w-1/3 space-y-4">
+        <h3 class="text-blue-400 font-semibold flex items-center gap-2 text-base">
+            <i class="fas fa-link"></i>
+            Related Links
+        </h3>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>Academic Position Information System for Lecturers at LLDikti Region IV
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>LLDIKTI Region IV – Level IV Educational Service Institution
+        </p>
+        <p class="text-sm text-gray-300 pb-1 border-b border-dotted border-gray-600 cursor-pointer hover:text-white transition-colors">
+            <i class="fas fa-chevron-right mr-2 text-xs text-blue-400"></i>Forlap Dikti
+        </p>
+    </div>
+</div>
+<div class="bg-[#2a2a2a] text-center text-xs text-gray-400 py-4">
+    © 2025 Universitas Catur Insan Cendekia - Data & Information Center. All Rights Reserved.
+</div>
+  
+    <a href="#beranda" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/prestasi.js"></script>
+
+</body>
+
+</html>
