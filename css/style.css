@@ -121,9 +121,8 @@
     max-width: 100px;
   }
 }
-
 #navbar, #mobileMenu nav {
-    font-family:  'Poppins' sans-serif ;
+    font-family: 'Poppins', sans-serif;
   }
 
   nav a:hover {
@@ -156,7 +155,6 @@
     margin: 0 auto;
   }
 
-  
 
 /*** Section Title ***/
 .section-title {
