@@ -215,3 +215,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setInterval(nextSlide, 8000); 
   showSlide(currentSlide);
+
+ document.querySelectorAll('.accordion-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('i');
+      const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+      document.querySelectorAll('.accordion-content').forEach(c => {
+        if (c !== content) {
+          c.style.maxHeight = null;
+          c.classList.add("opacity-0");
+        }
+      });
+      
+     
+      document.querySelectorAll('.accordion-btn i').forEach(i => {
+        if (i !== icon) {
+          i.classList.remove('rotate-180');
+        }
+      });
+
+   
+      if (isExpanded) {
+        content.style.maxHeight = null;
+        content.classList.add("opacity-0");
+        icon.classList.remove('rotate-180');
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.classList.remove("opacity-0");
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
