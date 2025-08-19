@@ -156,5 +156,6 @@ createApp({
 
 ## 👨‍💻 Kontributor
 
-* ****
-* Mahasiswa Sistem Informasi & Informatika
+* **Auddy deska mujiono**
+* **Satria saefulloh yusuf**
+* **Andri Taunlany**
